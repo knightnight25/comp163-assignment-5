@@ -29,3 +29,24 @@ print(current_number)
 # Prints the total number of steps taken 
 print(f"Steps: {step_count}\n")
     
+# Challenge 2: Prime Number Checker
+
+# Printing the title of challenge 2
+print("=== Challenge 2: Prime Number Checker ===")
+
+# Asks user to input a number
+number = int(input("Enter a number: "))
+
+# Determines if the number is greater than 1
+if number > 1:
+    print(f"Testing divisors from 2 to {number - 1}...")
+    # Loops through the numbers 2 to the number inputted minus 1
+    for num in range(2, number):
+        # Determines if the number is evenly divisible 
+        if (number % num) == 0:
+            print(f"{number} is not prime (divisible by {num})")
+            break
+    # Determines if the number cannot be divided evenly
+    else:
+        print(f"{number} is prime!\n")
+
