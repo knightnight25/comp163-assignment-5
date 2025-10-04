@@ -44,9 +44,36 @@ if number > 1:
     for num in range(2, number):
         # Determines if the number is evenly divisible 
         if (number % num) == 0:
-            print(f"{number} is not prime (divisible by {num})")
+            print(f"{number} is not prime (divisible by {num})\n")
             break
     # Determines if the number cannot be divided evenly
     else:
         print(f"{number} is prime!\n")
 
+# Challenge 3: Multiplication Table Grid
+
+# Printing the title of challenge 3
+print("=== Challenge 3: Multiplication Table ===")
+
+# Print header
+print("Multiplication Table:")
+
+# Prints a space to separate row from products
+print("    ", end="")
+
+# Print column header of numbers
+for column in range(1, 11):
+    print(f"{column:4}", end="")
+
+# Prints a new line
+print()
+
+# Prints rows of numbers
+for row in range(1, 11):
+    print(f"{row:4}", end="")
+
+    # Prints the products of the rows and columns
+    for column in range(1, 11):
+        product = row * column
+        print(f"{product:4}", end="")
+    print()
